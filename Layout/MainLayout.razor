@@ -1,0 +1,64 @@
+﻿@using MudBlazor
+@inherits LayoutComponentBase
+
+<MudThemeProvider />
+<MudPopoverProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudText Typo="Typo.h6">SNSC — Suivi passeport</MudText>
+        <MudSpacer />
+        <MudText Typo="Typo.body2">Portail citoyen</MudText>
+    </MudAppBar>
+
+    <MudMainContent>
+        <MudContainer MaxWidth="MaxWidth.Medium" Class="mt-6">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+
+    <MudPaper Class="mt-10"
+              Style="background-color:#f4f6f9; border-top:1px solid #ddd;">
+
+        <MudContainer MaxWidth="MaxWidth.Medium" Class="py-6">
+            <MudGrid Spacing="2">
+                <MudItem xs="12" sm="6">
+                    <MudText Typo="Typo.subtitle2">SNSC — Portail citoyen</MudText>
+                    <MudText Typo="Typo.body2">
+                        Suivi de demande de passeport — service d’information.
+                    </MudText>
+                    <MudText Typo="Typo.caption" Class="mt-2">
+                        Support : support@snsc.ht • Lun–Ven 08:00–16:00
+                    </MudText>
+                </MudItem>
+
+                <MudItem xs="12" sm="6">
+                    <MudStack AlignItems="AlignItems.End" Spacing="1">
+                        <MudLink Href="#" Underline="Underline.Hover">Confidentialité</MudLink>
+                        <MudLink Href="#" Underline="Underline.Hover">Conditions d’utilisation</MudLink>
+                        <MudLink Href="#" Underline="Underline.Hover">Accessibilité</MudLink>
+                    </MudStack>
+                </MudItem>
+            </MudGrid>
+
+            <MudDivider Class="my-4" />
+
+            <MudStack Row="true" Justify="Justify.SpaceBetween" AlignItems="AlignItems.Center">
+                <MudText Typo="Typo.caption">
+                    © @DateTime.Now.Year — Systeme nationnal de suivi consulaire. Tous droits réservés.
+                </MudText>
+
+                <MudText Typo="Typo.caption">
+                    v0.1 (Démo)
+                </MudText>
+            </MudStack>
+        </MudContainer>
+    </MudPaper>
+
+</MudLayout>
+
+
+
