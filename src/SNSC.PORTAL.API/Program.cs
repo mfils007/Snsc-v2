@@ -15,7 +15,12 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("dev", policy =>
     {
-        policy.AllowAnyHeader()
+        policy.WithOrigins(
+                "https://snsc-ui.onrender.com",
+                "http://localhost:5173",
+                "https://locahost:7092"
+              )
+              .AllowAnyHeader()
               .AllowAnyMethod()
               .SetIsOriginAllowed(_ => true); // OK pour dev
     });
