@@ -1,0 +1,6 @@
+@SNSC.PORTAL.API_HostAddress = http://localhost:5079
+
+GET {{SNSC.PORTAL.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
