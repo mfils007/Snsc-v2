@@ -4,7 +4,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet publish SNSC.PORTAL.API/SNSC.PORTAL.API.csproj -c Release -o /app/publish
+RUN dotnet publish ./SNSC.PORTAL.API/SNSC.PORTAL.API.csproj -c Release -o /app/publish
 
 # ---- Run ----
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
